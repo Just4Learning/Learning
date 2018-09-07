@@ -20,8 +20,7 @@
 #define RATE2 0.20
 #define RATE3 0.25
 
-int main(void)
-{
+int main(void) {
     double hours;
     double pay;
     double taxes;
@@ -29,29 +28,23 @@ int main(void)
 
     printf("请输入一周的工作小时数：");
     scanf("%lf", &hours);
-    if(hours <= BASEHRS)
-    {
+    if(hours <= BASEHRS) {
         pay = BASEPAY * hours;
-    }
-    else
-    {
+    } else {
         pay = BASEPAY * BASEHRS + (hours - BASEHRS) * OTPAY;
     }
-    if(pay <= BREAK1)
-    {
+
+    if(pay <= BREAK1) {
         taxes = pay * RATE1;
-    }
-    else if(pay <= BREAK1 + BREAK2)
-    {
+    } else if(pay <= BREAK1 + BREAK2) {
         taxes = BREAK1 * RATE1 +(pay - BREAK1) * RATE2;
-    }
-    else
-    {
+    } else {
         taxes = BREAK1 * RATE1 + BREAK2 * RATE2+(pay - BREAK1 - BREAK2) * RATE3;
     }
+
     rest = pay - taxes;
     printf("一周中工作%.2lf小时，工资为%.2lf美元，税金%.2lf美元，净工资%.2lf美元。\n", 
-         hours, pay, taxes, rest);
+           hours, pay, taxes, rest);
 
     return 0;
 }
