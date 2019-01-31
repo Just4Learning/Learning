@@ -20,7 +20,7 @@
 #define RATE2 0.20
 #define RATE3 0.25
 
-int main(void) { 
+int main(void) {
     double hours;
     double pay;
     double taxes;
