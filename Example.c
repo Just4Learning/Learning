@@ -42,7 +42,7 @@ int main(void) {
         taxes = BREAK1 * RATE1 + BREAK2 * RATE2+(pay - BREAK1 - BREAK2) * RATE3;
     }
 
-    rest = pay - taxes;
+    rest = pay - taxes; 
     printf("一周中工作%.2lf小时，工资为%.2lf美元，税金%.2lf美元，净工资%.2lf美元。\n", 
            hours, pay, taxes, rest);
 
