@@ -26,7 +26,7 @@ int main(void) {
     double taxes;
     double rest;
 
-    printf("请输入一周的工作小时数：");
+    printf("请输入一周的工作小时数："); 
     scanf("%lf", &hours);
     if(hours <= BASEHRS) {
         pay = BASEPAY * hours;
